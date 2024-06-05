@@ -165,8 +165,130 @@ img.add_border {
   &lt;body&gt;
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-<pre class="oz pa pb pc pd pe pf pg ph ax pi bj"><br/><br/></pre>
-<pre class="oz pa pb pc pd pe pf pg ph ax pi bj"></pre><br />期末專案 << <a href='期末專案.html'>Previous</a> <a href='Replit.html'>Next</a> >> Replit</div>
+<p>document.write表示寫入資料夾到文件中(因為當前文件尚未關閉，所以會寫到文件未端，而瀏覽器會自動寫到&lt;body&gt;尾端，但如果沒有建立&lt;body&gt;，則會在建立後跑到&lt;body&gt;的開始處)，接著利用瀏覽器開啟網頁檔，就可以看到程式的結果。</p>
+<p>如何在html中加入JavaScript?</p>
+<p>第一種方法:如上面的範例，在html中直接使用&lt;script&gt;...&lt;/script&gt;的標籤來表示嵌入一段JavaScript程式，而嵌入的位置可以在&lt;head&gt;和&lt;body&gt;之中的任意位置(不建議放在&lt;head&gt;最前面，因為&lt;head&gt;第一個節點通常為編碼宣告)。</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;html&gt;
+&lt;body&gt;
+&lt;script type="text/javascript"&gt;
+var x =6, y=8;
+var s = "Hello! "
+
+t = s + x;
+z = x * y;
+
+document.write("&lt;pre&gt;x="+x+"\ny="+y+"\ns="+s+"\nt="+t+"\nz="+z+"&lt;/pre&gt;");
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>結果為:x=6 y=8 s=Hello! 6 z=48</p>
+<p>第二種方法:是將JavaScript程式獨立寫成別的檔案，不直接和html檔案寫在一起，JavaScript的檔案副檔名為js檔，例如建立一個hello.js檔，裡面寫入:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">document.write(‘Hello world!’);</pre>
+<p>然後html檔案則改為:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="content-type" content="text/html;
+ charset=utf-8"&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Hello World!&lt;/title&gt;
+    &lt;script src="hello.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>如上所示，在&lt;script&gt;中使用src的屬性指出外部js的位址</p>
+<p><span style="background-color: #ffff00;">註解</span></p>
+<p>註解部分不會執行，是給人看的，JavaScript中有兩種註解方式:</p>
+<p>1.//單行註解:兩個斜線後面的部分將不會處理。</p>
+<p>2./*...*/多行註解:註解中間的部分將不會處理。</p>
+<p></p>
+<p>分號結尾</p>
+<p>一般程式語言，每段程式結尾都是以分號表示，但JavaScript能夠自動幫你在位加上分號的結尾加上分號，JavaScript容許這樣的錯誤發生，但有時候JavaScript會誤解你的意思而造成錯誤。</p>
+<p>基本語法範例</p>
+<p>1.運算式</p>
+<p>2.分支</p>
+<p>3.迴圈</p>
+<p>4.函數</p>
+<p>5.陣列</p>
+<p>運算式範例</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;html&gt;
+&lt;body&gt;
+&lt;script type="text/javascript"&gt;
+var x =6, y=8;
+var s = "Hello! "
+
+t = s + x;
+z = x * y;
+
+document.write("&lt;pre&gt;x="+x+"\ny="+y+"\ns="+s+"\nt="+t+"\nz="+z+"&lt;/pre&gt;");
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>執行結果 x=6 y=8 s=Hello! t=Hello! 6 z=48</p>
+<p>分支範例</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;html&gt;
+&lt;body&gt;
+&lt;script type="text/javascript"&gt;
+var score = 70;
+if (score &gt;= 60)
+  document.write("及格");
+else
+  document.write("不及格");
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>執行結果:及格</p>
+<p>迴圈範例</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;html&gt;
+&lt;body&gt;
+&lt;script type="text/javascript"&gt;
+for (i=1;i&lt;=10;i++) {
+  if (i == 3) continue;
+  if (i == 8) break;
+  document.write("i="+i+"&lt;BR/&gt;");
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>執行結果:</p>
+<p>i=1 i=2 i=4 i=5 i=6 i=7</p>
+<p>函數範例</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;html&gt;
+&lt;body&gt;
+
+&lt;script type="text/javascript"&gt;
+var add = function(a,b) {     // 第一種寫法，將匿名函數指定給變數。
+  return a+b;
+}
+
+function sub(a,b) {            // 第二種寫法，直接宣告函數，該函式是一個函數物件，
+  return a-b;
+}
+
+document.write("add(3,5)="+add(3,5)+" sub(7,2)="+sub(7,2));
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>執行結果 add(3,5)=8 sub(7,2)=5</p>
+<p>陣列範例</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;html&gt;
+&lt;body&gt;
+&lt;script type="text/javascript"&gt;
+var x;
+var friends = new Array();
+friends[0] = "John";
+friends[1] = "Mary";
+friends[2] = "George";
+for (p in friends) {
+  document.write(p + ":"+ friends[p] + "&lt;br /&gt;");
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>執行結果 0:John 1:Mary 2:George</p>
+<p></p><br />期末專案 << <a href='期末專案.html'>Previous</a> <a href='Replit.html'>Next</a> >> Replit</div>
 
     <!-- footer -->
       <div class="container">
