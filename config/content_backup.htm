@@ -579,12 +579,44 @@ for (p in friends) {
 <p>Brython是Python嗎?</p>
 <p><span></span>是<span>，</span><span>Brython 是 Python 的一種實現</span></p>
 <p><span>Brython 是在瀏覽器中運行的 Python 3 的實現。它具有 DOM 元素和事件的接口。這意味著可以使用 Brython 在瀏覽器中創建 Web 應用程序。</span></p>
-<h2>了解如何利用 Brython 透過網址讀取資料</h2><h2>CSS基本語法</h2>
+<h2>了解如何利用 Brython 透過網址讀取資料</h2>
+<p><span>要使用 Brython 透過網址讀取資料，</span><span>可以使用 </span><code class="">XMLHttpRequest</code><span> 物件。</span><span>以下是一個例子：</span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Brython Example&lt;/title&gt;
+  &lt;script src="https://cdn.jsdelivr.net/npm/brython@3.10.0/dist/brython.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script type="text/python"&gt;
+    def load_data():
+      xhr = brython.XMLHttpRequest()
+      xhr.open("GET", "https://www.example.com/data.json")
+      xhr.onreadystatechange = lambda: on_request_change(xhr)
+      xhr.send()
+
+    def on_request_change(xhr):
+      if xhr.readyState == 4 and xhr.status == 200:
+        data = brython.json.loads(xhr.responseText)
+        print(data)
+
+    load_data()
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>代碼執行操作</p>
+<p></p>
+<p><span>它將創建一個 </span><code class="">XMLHttpRequest</code><span> 物件。</span></p>
+<p><span>它將打開一個 GET 請求到 URL </span><code class="">https://www.example.com/data.json</code><span>。</span></p>
+<p><span>它將定義一個 </span><code class="">onreadystatechange</code><span> 處理程序，</span><span>該處理程序將在請求完成時運行。</span></p>
+<p><span>它將發送請求。</span></p>
+<p></p><h2>了解如何利用 Brython 程式分割 .csv 檔案, 了解數列的資料儲存方式</h2>
+<h2>CSS基本語法</h2>
 <p>Q:CSS是什麼?</p>
 <p>A:是一個階層式樣式表(英語：<span lang="en">Cascading Style Sheets)，是一種用來為結構化文件添加樣式的電腦語言。</span></p>
 <p><span lang="en">CSS可以靜態地修飾網頁，能夠對網頁中的元素位置的排版進行像素級精確控制，支援幾乎所有的字型字號樣式，擁有對網頁對象和模型樣式編輯的能力。但CSS不能單獨使用，必須與html一起協同工作，CSS可以用於設定頁面布局、設定頁面元素樣式、設定適用於所有網頁的全域樣式。</span></p>
-<p><span lang="en">資料尚未完全...</span></p>
-<h1>了解AI產業的發展過程</h1>
+<p><span lang="en">資料尚未完全...</span></p><h1>了解AI產業的發展過程</h1>
 <p>為什麼會想了解AI的由來?</p>
 <p>因為看了黃仁勳的主題演講，裡面有提到ChatGPT的發展過程，而記錄下來。</p>
 <p></p>

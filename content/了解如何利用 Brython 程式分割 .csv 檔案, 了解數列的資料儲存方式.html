@@ -2,7 +2,7 @@
         <head>
         <title>41223136</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -142,9 +142,40 @@ img.add_border {
           </div>
 
         </header>
-    <div id="tipue_search_content">期末專案 << <a href='期末專案.html'>Previous</a> <a href='了解基本 html 語法.html'>Next</a> >> 了解基本 html 語法<br /><h1>基礎語法介紹</h1>
-<p>介紹JavaScript和css的基本語法內容</p>
-<br />期末專案 << <a href='期末專案.html'>Previous</a> <a href='了解基本 html 語法.html'>Next</a> >> 了解基本 html 語法</div>
+    <div id="tipue_search_content">了解如何利用 Brython 透過網址讀取資料 << <a href='了解如何利用 Brython 透過網址讀取資料.html'>Previous</a> <a href='CSS基本語法.html'>Next</a> >> CSS基本語法<br /><h1>了解如何利用 Brython 程式分割 .csv 檔案, 了解數列的資料儲存方式</h1>
+<p>要使用 Brython 程式分割 .csv 檔案，您可以使用 <code>csv</code> 模塊。以下是一個範例:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Brython Example&lt;/title&gt;
+  &lt;script src="https://cdn.jsdelivr.net/npm/brython@3.10.0/dist/brython.js"&gt;&lt;/script&gt;
+  &lt;script src="https://cdn.jsdelivr.net/npm/brython-csv@0.2.0/dist/csv.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script type="text/python"&gt;
+    import csv
+
+    def load_data():
+      with open("data.csv", "r") as f:
+        reader = csv.reader(f)
+        for row in reader:
+          print(row)
+
+    load_data()
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>代碼將執行以下操作:</p>
+<p></p>
+<ul>
+<li data-sourcepos="29:1-29:17">它將導入 <code>csv</code> 模塊。</li>
+<li data-sourcepos="30:1-30:25">它將打開名為 <code>data.csv</code> 的文件。</li>
+<li data-sourcepos="31:1-31:40">它將創建一個 <code>csv.reader</code> 物件，該物件將用於迭代文件中的行。</li>
+<li data-sourcepos="32:1-33:0">它將為文件中的每一行打印一個列表。</li>
+</ul>
+<p></p>
+<p></p><br />了解如何利用 Brython 透過網址讀取資料 << <a href='了解如何利用 Brython 透過網址讀取資料.html'>Previous</a> <a href='CSS基本語法.html'>Next</a> >> CSS基本語法</div>
 
     <!-- footer -->
       <div class="container">

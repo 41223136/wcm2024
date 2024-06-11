@@ -611,12 +611,44 @@ for (p in friends) {
 <p><span>它將打開一個 GET 請求到 URL </span><code class="">https://www.example.com/data.json</code><span>。</span></p>
 <p><span>它將定義一個 </span><code class="">onreadystatechange</code><span> 處理程序，</span><span>該處理程序將在請求完成時運行。</span></p>
 <p><span>它將發送請求。</span></p>
+<p></p><h2>了解如何利用 Brython 程式分割 .csv 檔案, 了解數列的資料儲存方式</h2>
+<p>要使用 Brython 程式分割 .csv 檔案，您可以使用 <code>csv</code> 模塊。以下是一個範例:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Brython Example&lt;/title&gt;
+  &lt;script src="https://cdn.jsdelivr.net/npm/brython@3.10.0/dist/brython.js"&gt;&lt;/script&gt;
+  &lt;script src="https://cdn.jsdelivr.net/npm/brython-csv@0.2.0/dist/csv.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script type="text/python"&gt;
+    import csv
+
+    def load_data():
+      with open("data.csv", "r") as f:
+        reader = csv.reader(f)
+        for row in reader:
+          print(row)
+
+    load_data()
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>代碼將執行以下操作:</p>
+<p></p>
+<ul>
+<li data-sourcepos="29:1-29:17">它將導入 <code>csv</code> 模塊。</li>
+<li data-sourcepos="30:1-30:25">它將打開名為 <code>data.csv</code> 的文件。</li>
+<li data-sourcepos="31:1-31:40">它將創建一個 <code>csv.reader</code> 物件，該物件將用於迭代文件中的行。</li>
+<li data-sourcepos="32:1-33:0">它將為文件中的每一行打印一個列表。</li>
+</ul>
+<p></p>
 <p></p><h2>CSS基本語法</h2>
 <p>Q:CSS是什麼?</p>
 <p>A:是一個階層式樣式表(英語：<span lang="en">Cascading Style Sheets)，是一種用來為結構化文件添加樣式的電腦語言。</span></p>
 <p><span lang="en">CSS可以靜態地修飾網頁，能夠對網頁中的元素位置的排版進行像素級精確控制，支援幾乎所有的字型字號樣式，擁有對網頁對象和模型樣式編輯的能力。但CSS不能單獨使用，必須與html一起協同工作，CSS可以用於設定頁面布局、設定頁面元素樣式、設定適用於所有網頁的全域樣式。</span></p>
-<p><span lang="en">資料尚未完全...</span></p>
-<h1>了解AI產業的發展過程</h1>
+<p><span lang="en">資料尚未完全...</span></p><h1>了解AI產業的發展過程</h1>
 <p>為什麼會想了解AI的由來?</p>
 <p>因為看了黃仁勳的主題演講，裡面有提到ChatGPT的發展過程，而記錄下來。</p>
 <p></p>
