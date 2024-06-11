@@ -551,7 +551,31 @@ for (p in friends) {
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
-<p>執行結果 0:John 1:Mary 2:George</p><h2>CSS基本語法</h2>
+<p>執行結果 0:John 1:Mary 2:George</p>
+<h2>了解如何在頁面啟動 Brython 程式解譯環境</h2>
+<p>要在頁面啟動Brython程式，可將下面代碼放入html頁面中</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Brython Example&lt;/title&gt;
+  &lt;script src="https://cdn.jsdelivr.net/npm/brython@3.10.0/dist/brython.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script type="text/python"&gt;
+    print("Hello, world!")
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p></p>
+<p>代碼將在頁面加載時執行以下操作:</p>
+<p>1.它將從 CDN 加載 Brython JavaScript 庫。</p>
+<p>2.<span>它將定義一個 </span><code class="">&lt;script&gt;</code><span> 標籤，</span><span>其 </span><code class="">type</code><span> 屬性設置為 </span><code class="">text/python</code><span>。</span><span>這告訴 Brython 解譯器將標籤內的代碼視為 Python 程式碼。</span></p>
+<p>3.<span>它將在 Python 程式碼中打印“Hello,</span><span> world!</span><span>”。</span></p>
+<p>打開此頁面就會看到Hello,world！</p>
+<p>Brython是Python嗎?</p>
+<p><span></span>是<span>，</span><span>Brython 是 Python 的一種實現</span></p>
+<p><span>Brython 是在瀏覽器中運行的 Python 3 的實現。它具有 DOM 元素和事件的接口。這意味著可以使用 Brython 在瀏覽器中創建 Web 應用程序。</span></p><h2>CSS基本語法</h2>
 <p>Q:CSS是什麼?</p>
 <p>A:是一個階層式樣式表(英語：<span lang="en">Cascading Style Sheets)，是一種用來為結構化文件添加樣式的電腦語言。</span></p>
 <p><span lang="en">CSS可以靜態地修飾網頁，能夠對網頁中的元素位置的排版進行像素級精確控制，支援幾乎所有的字型字號樣式，擁有對網頁對象和模型樣式編輯的能力。但CSS不能單獨使用，必須與html一起協同工作，CSS可以用於設定頁面布局、設定頁面元素樣式、設定適用於所有網頁的全域樣式。</span></p>
