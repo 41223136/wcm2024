@@ -746,7 +746,16 @@ for (p in friends) {
 <li data-sourcepos="20:1-20:62"><strong>創建動態 Web 頁面</strong><span>：可以使用 </span><code class="">html</code><span> 模塊來創建和修改 HTML 元素，</span><span>從而創建動態 Web 頁面。</span></li>
 <li data-sourcepos="21:1-21:49"><strong>處理用戶輸入</strong><span>：使用 </span><code class="">html</code><span> 模塊來處理用戶輸入，</span><span>例如來自表單或按鈕的點擊。</span></li>
 <li data-sourcepos="22:1-23:0"><strong>創建交互式 Web 應用程序</strong><span>：可以使用 </span><code class="">html</code><span> 模塊來創建交互式 Web 應用程序，</span><span>例如遊戲或計算器。</span></li>
-</ul><h2>CSS基本語法</h2>
+</ul><h2>了解 Brython 如何與 Javascript 程式互動</h2>
+<p data-sourcepos="3:1-3:16"><strong>1.使用 <code>window</code> 物件</strong></p>
+<p data-sourcepos="5:1-5:57"><code class="">window</code><span> 物件是 JavaScript 全局對象，</span><span>可讓訪問 JavaScript 函數和變量。</span><span>可以使用 Brython 的 </span><code class="">window</code><span> 對象來調用 JavaScript 函數和獲取 JavaScript 變量。</span></p>
+<p data-sourcepos="13:1-13:3"><strong>2. 使用 <code>js_eval()</code> 函數</strong></p>
+<p data-sourcepos="15:1-15:90"><code class="">js_eval()</code><span> 函數可讓運行 JavaScript 程式碼。</span><span>可以使用此函數來執行複雜的 JavaScript 操作，</span><span>例如創建自定義 DOM 元素或處理 JSON 數據。</span></p>
+<p data-sourcepos="27:1-27:21"><strong> 3.使用 Brython 模塊</strong></p>
+<p data-sourcepos="29:1-29:84"><span>一些 Brython 模塊提供了與 JavaScript 庫交互的功能。</span><span>例如，</span><code class="">brython_websocket</code><span> 模塊可使用 WebSocket 與服務器通信。</span></p>
+<p data-sourcepos="31:1-31:59"><span>要使用 Brython 模塊，</span><span>需要先安裝它</span></p>
+<p data-sourcepos="50:1-50:9"><strong>4.使用 <code>@JS()</code> 裝飾器</strong></p>
+<p data-sourcepos="52:1-52:78"><code class="">@JS()</code><span> 裝飾器可將 Python 函數標記為 JavaScript 函數。</span><span>這可以使用戶端 JavaScript 程式碼調用 Python 函數。</span></p><h2>CSS基本語法</h2>
 <p>Q:CSS是什麼?</p>
 <p>A:是一個階層式樣式表(英語：<span lang="en">Cascading Style Sheets)，是一種用來為結構化文件添加樣式的電腦語言。</span></p>
 <p><span lang="en">CSS可以靜態地修飾網頁，能夠對網頁中的元素位置的排版進行像素級精確控制，支援幾乎所有的字型字號樣式，擁有對網頁對象和模型樣式編輯的能力。但CSS不能單獨使用，必須與html一起協同工作，CSS可以用於設定頁面布局、設定頁面元素樣式、設定適用於所有網頁的全域樣式。</span></p>
