@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統 - w1</title><link href="./" rel="alternate"></link><link href="./feeds/w1.atom.xml" rel="self"></link><id>./</id><updated>2024-06-11T15:02:57+08:00</updated><entry><title>2024 w1 課程</title><link href="./2024-w1-blog-course.html" rel="alternate"></link><published>2024-06-11T10:21:00+08:00</published><updated>2024-06-11T15:02:57+08:00</updated><author><name>kmolab</name></author><id>tag:None,2024-06-11:./2024-w1-blog-course.html</id><summary type="html">&lt;p&gt;2024 w1上課內容&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統 - w1</title><link href="./" rel="alternate"></link><link href="./feeds/w1.atom.xml" rel="self"></link><id>./</id><updated>2024-06-11T15:36:12+08:00</updated><entry><title>2024 w1 課程</title><link href="./2024-w1-blog-course.html" rel="alternate"></link><published>2024-06-11T10:21:00+08:00</published><updated>2024-06-11T15:36:12+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-06-11:./2024-w1-blog-course.html</id><summary type="html">&lt;p&gt;2024 w1上課內容&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2024 w1上課內容&lt;/p&gt;
 
 
 &lt;h1&gt;建立Github帳號&lt;/h1&gt;
 &lt;p&gt;在Google搜尋Github並Sign up可用來建立並維護個人的課程倉儲與網站&lt;/p&gt;
 &lt;h1&gt;建立個人課程網站&lt;/h1&gt;
-&lt;p&gt;請至 https://github.com/mdecycu/cmsimde_site ,以此倉儲作為Template
+&lt;p&gt;請至 &lt;a href="https://github.com/mdecycu/cmsimde_site"&gt;cmsimde_site&lt;/a&gt; 倉儲,以此倉儲作為Template
 建立個人的wcm2024倉儲,並設定個人的Github Pages課程網頁&lt;/p&gt;</content><category term="w1"></category><category term="w1上課內容"></category></entry><entry><title>2024 Spring 課程</title><link href="./2024-Spring-w1-blog-tutorial.html" rel="alternate"></link><published>2024-02-18T11:00:00+08:00</published><updated>2024-06-11T14:58:27+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-02-18:./2024-Spring-w1-blog-tutorial.html</id><summary type="html">&lt;p&gt;2024 Spring 網際內容管理與協同產品設計實習課程教學導引.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2024 Spring 網際內容管理與協同產品設計實習課程教學導引.&lt;/p&gt;
 

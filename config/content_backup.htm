@@ -644,7 +644,91 @@ for (p in friends) {
 <li data-sourcepos="32:1-33:0">它將為文件中的每一行打印一個列表。</li>
 </ul>
 <h2>了解如何使用 Brython 重複迴圈</h2>
-<p></p><h2>CSS基本語法</h2>
+<div _ngcontent-ng-c3978317340="" class="response-container-content ng-tns-c3978317340-21" selection="">
+<div _ngcontent-ng-c3687196067="" class="response-content ng-tns-c3978317340-21"><message-content _ngcontent-ng-c3687196067="" _nghost-ng-c3376701509="" class="model-response-text ng-star-inserted" id="message-content-id-r_7ebfff383afc92a1" style="height: auto;">
+<div _ngcontent-ng-c3376701509="" class="markdown markdown-main-panel" dir="ltr" style="--animation-duration: 600ms; --fade-animation-function: linear; --first-token-animation-duration: 600ms;">
+<p data-sourcepos="1:1-1:42">Brython 提供了兩種常用的重複迴圈：<code>for</code> 迴圈和 <code>while</code> 迴圈。</p>
+<p data-sourcepos="3:1-3:15"><strong>1. <code>for</code> 迴圈</strong></p>
+<p data-sourcepos="5:1-5:44"><code>for</code> 迴圈用於迭代可迭代對象中的元素。可迭代對象可以是列表、字符串、元組或字典等。</p>
+<p data-sourcepos="7:1-7:16">以下是 <code>for</code> 迴圈的語法：</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">for variable in iterable:
+  # 迴圈體
+</pre>
+</div>
+</message-content></div>
+</div>
+<p data-sourcepos="14:1-14:3">其中：</p>
+<ul data-sourcepos="16:1-18:0">
+<li data-sourcepos="16:1-16:27"><code>variable</code> 是用於遍歷可迭代對象的變量。</li>
+<li data-sourcepos="17:1-18:0"><code>iterable</code> 是要遍歷的可迭代對象。</li>
+</ul>
+<p>以下是 <code>for</code> 迴圈的示例：</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Brython Example&lt;/title&gt;
+  &lt;script src="https://cdn.jsdelivr.net/npm/brython@3.10.0/dist/brython.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script type="text/python"&gt;
+    numbers = [1, 2, 3, 4, 5]
+
+    for number in numbers:
+      print(number)
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>此代碼將打印以下輸出：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p data-sourcepos="49:1-49:17"><strong>2. <code>while</code> 迴圈</strong></p>
+<p data-sourcepos="51:1-51:31"><code>while</code> 迴圈用於重複執行程式碼塊，直到指定的條件為假。</p>
+<p data-sourcepos="53:1-53:18">以下是 <code>while</code> 迴圈的語法：</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">while condition:
+  # 迴圈體</pre>
+<p data-sourcepos="60:1-60:3">其中：</p>
+<ul data-sourcepos="62:1-63:0">
+<li data-sourcepos="62:1-63:0"><code>condition</code> 是要檢查的條件。</li>
+</ul>
+<p data-sourcepos="64:1-64:18">以下是 <code>while</code> 迴圈的示例：</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Brython Example&lt;/title&gt;
+  &lt;script src="https://cdn.jsdelivr.net/npm/brython@3.10.0/dist/brython.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script type="text/python"&gt;
+    i = 0
+
+    while i &lt; 5:
+      print(i)
+      i += 1
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p data-sourcepos="85:1-85:11">此代碼將打印以下輸出：</p>
+<p data-sourcepos="53:1-53:18"><response-element _nghost-ng-c3795365390="" class="" ng-version="0.0.0-PLACEHOLDER"><code-block _ngcontent-ng-c3795365390="" _nghost-ng-c2527465495="" class="ng-tns-c2527465495-158 ng-star-inserted"></code-block></response-element></p>
+<div _ngcontent-ng-c2527465495="" class="code-block ng-tns-c2527465495-158 ng-trigger ng-trigger-codeBlockRevealAnimation" style="display: block;">
+<div _ngcontent-ng-c2527465495="" class="code-block-internal-container ng-tns-c2527465495-158">
+<div _ngcontent-ng-c2527465495="" class="animated-opacity ng-tns-c2527465495-158">
+<pre _ngcontent-ng-c2527465495="" class="ng-tns-c2527465495-158"><code _ngcontent-ng-c2527465495="" class="code-container ng-tns-c2527465495-158 no-decoration-radius" data-sourcepos="87:1-93:1" data-test-id="code-content" role="text">0
+1
+2
+3
+4</code></pre>
+</div>
+</div>
+</div>
+<p><br/><br/></p>
+<p></p>
+<p></p><h2>了解 Brython html 模組的應用, 了解 html DOM 運作方式</h2>
+<h2>CSS基本語法</h2>
 <p>Q:CSS是什麼?</p>
 <p>A:是一個階層式樣式表(英語：<span lang="en">Cascading Style Sheets)，是一種用來為結構化文件添加樣式的電腦語言。</span></p>
 <p><span lang="en">CSS可以靜態地修飾網頁，能夠對網頁中的元素位置的排版進行像素級精確控制，支援幾乎所有的字型字號樣式，擁有對網頁對象和模型樣式編輯的能力。但CSS不能單獨使用，必須與html一起協同工作，CSS可以用於設定頁面布局、設定頁面元素樣式、設定適用於所有網頁的全域樣式。</span></p>
