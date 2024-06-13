@@ -142,30 +142,326 @@ img.add_border {
           </div>
 
         </header>
-    <div id="tipue_search_content">網頁上的 IDE << <a href='網頁上的 IDE.html'>Previous</a> <a href='期末專案.html'>Next</a> >> 期末專案<br /><h1>AI 工具</h1>
-<p>ChatGPT 與 Gemini Pro 都可以直接利用 Gmail 帳號登入, 初級應用目前都可免費使用, 這兩個 AI 工具可以協助我們解決甚麼問題?</p>
-<p>ChatGPT<strong>:</strong> 是一個對話式人工智能模型，它可以理解和生成自然語言文本。</p>
-<p>例如：</p>
-<p>回答問題：ChatGPT 可以回答關於各種主題的問題，提供信息和解釋。</p>
-<p>提供建議：ChatGPT 可以提供建議和指導，例如在技術、創意或生活方面。</p>
-<p>訓練對話：ChatGPT 可以用於訓練對話模型，例如客服機器人或虛擬助手。</p>
-<p>創作文本：ChatGPT 可以生成各種類型的文本，包括故事、文章和詩歌。</p>
-<p>Gemini Pro 是一個自然語言處理工具，它提供了多種功能，可以解決各種問題，例如：</p>
-<p>文本分析：Gemini Pro 可以分析文本，提取關鍵信息，並進行情感分析、主題分類等任務。</p>
-<p>信息檢索：Gemini Pro 可以通過文本搜索引擎來檢索相關信息，幫助你找到所需的內容。</p>
-<p>自然語言生成：Gemini Pro 可以生成自然語言文本，例如摘要、說明或報告。</p>
-<p></p>
-<p>為什麼有這些工具驚為天人?</p>
-<p>這些工具驚艷人心的原因在於它們的創新性、功能性和應用廣泛性。</p>
-<p>1.智能化和自動化</p>
-<p>2.便捷性和可用性</p>
-<p>3.多功能性</p>
-<p>4.創新性和前瞻性</p>
-<p>有人卻覺得還好而已, 並無法從中挖出甚麼資料?</p>
-<p>在別人眼中可能只是一項交作業的工具而已，但在我自己眼中是一款非常大的發明，了解自己所未知的世界，去探討增加自己的不足能力，來提升自己的未來優勢。</p>
-<p>學習議題: AI 工具曾經協助我們解決甚麼問題?</p>
-<p>AI幫我們解決過程式和課業問題，AI也可以幫我們規劃旅遊計畫表等等。<a href="https://41223136.github.io/wcm2024/content/%E4%BA%86%E8%A7%A3AI%E7%94%A2%E6%A5%AD%E7%9A%84%E7%99%BC%E5%B1%95%E9%81%8E%E7%A8%8B.html">了解AI產業的感想</a></p>
-<br />網頁上的 IDE << <a href='網頁上的 IDE.html'>Previous</a> <a href='期末專案.html'>Next</a> >> 期末專案</div>
+    <div id="tipue_search_content">期末專案 << <a href='期末專案.html'>Previous</a> <a href='CSS代碼.html'>Next</a> >> CSS代碼<br /><h1>Javascript代碼</h1>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">const COLS = 10;
+const ROWS = 20;
+const COLORS = [
+    null,
+    'cyan', 'blue', 'orange', 'yellow', 'green', 'purple', 'red'
+];
+const SHAPES = [
+    [],
+    [[1, 1, 1, 1]],
+    [[1, 1], [1, 1]],
+    [[0, 1, 0], [1, 1, 1]],
+    [[1, 1, 0], [0, 1, 1]],
+    [[0, 1, 1], [1, 1, 0]],
+    [[1, 1, 1], [1, 0, 0]],
+    [[1, 1, 1], [0, 0, 1]]
+];
+
+const INITIAL_MOVE_DELAY = 200; // 初始延迟时间
+const CONTINUOUS_MOVE_INTERVAL = 100; // 持续移动的间隔时间
+
+class Tetris {
+    constructor() {
+        this.initGame();
+        this.update();
+    }
+
+    initGame() {
+        this.board = this.createBoard();
+        this.currentPiece = this.newPiece();
+        this.nextPiece = this.newPiece(this.currentPiece.id);
+        this.heldPiece = null; // 新增变量保存存储的方块
+        this.canHold = true; // 标志是否可以存储方块
+        this.pos = { x: 0, y: 0 };
+        this.score = 0;
+        this.gameOver = false;
+        this.dropInterval = 1000;
+        this.dropCounter = 0;
+        this.lastTime = 0;
+        this.moveLeftInterval = null;
+        this.moveRightInterval = null;
+        this.moveLeftTimeout = null;
+        this.moveRightTimeout = null;
+
+        this.initBoard();
+        this.draw();
+    }
+
+    createBoard() {
+        return Array.from({ length: ROWS }, () =&gt; Array(COLS).fill(0));
+    }
+
+    newPiece(excludeId = null) {
+        let id;
+        do {
+            id = Math.floor(Math.random() * (SHAPES.length - 1)) + 1;
+        } while (id === excludeId);
+        
+        const shape = SHAPES[id];
+        return {
+            id,
+            shape,
+            color: COLORS[id],
+            pos: { x: Math.floor(COLS / 2) - Math.floor(shape[0].length / 2), y: 0 }
+        };
+    }
+
+    initBoard() {
+        const gameElement = document.getElementById('game');
+        gameElement.innerHTML = '';
+        for (let y = 0; y &lt; ROWS; y++) {
+            for (let x = 0; x &lt; COLS; x++) {
+                const cell = document.createElement('div');
+                cell.className = 'cell';
+                gameElement.appendChild(cell);
+            }
+        }
+    }
+
+    draw() {
+        const gameElement = document.getElementById('game');
+        const cells = gameElement.getElementsByClassName('cell');
+        for (let y = 0; y &lt; ROWS; y++) {
+            for (let x = 0; x &lt; COLS; x++) {
+                const cellIndex = y * COLS + x;
+                const cell = cells[cellIndex];
+                const value = this.board[y][x];
+                cell.className = 'cell';
+                if (value) {
+                    cell.classList.add('filled');
+                    cell.style.backgroundColor = COLORS[value];
+                } else {
+                    cell.style.backgroundColor = '#333'; // 黑色背景
+                }
+            }
+        }
+
+        this.drawGhostPiece();
+
+        this.currentPiece.shape.forEach((row, dy) =&gt; {
+            row.forEach((value, dx) =&gt; {
+                if (value) {
+                    const cellIndex = (this.currentPiece.pos.y + dy) * COLS + (this.currentPiece.pos.x + dx);
+                    const cell = cells[cellIndex];
+                    cell.style.backgroundColor = this.currentPiece.color;
+                }
+            });
+        });
+
+        this.drawHeldPiece(); // 绘制存储的方块
+    }
+
+    drawGhostPiece() {
+        const ghostPiece = JSON.parse(JSON.stringify(this.currentPiece));
+        while (!this.collide(ghostPiece)) {
+            ghostPiece.pos.y++;
+        }
+        ghostPiece.pos.y--;
+        ghostPiece.shape.forEach((row, dy) =&gt; {
+            row.forEach((value, dx) =&gt; {
+                if (value) {
+                    const cellIndex = (ghostPiece.pos.y + dy) * COLS + (ghostPiece.pos.x + dx);
+                    const cell = document.getElementsByClassName('cell')[cellIndex];
+                    cell.classList.add('ghost');
+                }
+            });
+        });
+    }
+
+    drawHeldPiece() {
+        if (!this.heldPiece) return;
+
+        const heldElement = document.getElementById('held-piece');
+        heldElement.innerHTML = '';
+        this.heldPiece.shape.forEach((row, dy) =&gt; {
+            row.forEach((value, dx) =&gt; {
+                if (value) {
+                    const cell = document.createElement('div');
+                    cell.className = 'cell';
+                    cell.style.backgroundColor = this.heldPiece.color;
+                    cell.style.width = '30px';
+                    cell.style.height = '30px';
+                    heldElement.appendChild(cell);
+                } else {
+                    const cell = document.createElement('div');
+                    cell.className = 'cell';
+                    cell.style.backgroundColor = '#333';
+                    cell.style.width = '30px';
+                    cell.style.height = '30px';
+                    heldElement.appendChild(cell);
+                }
+            });
+        });
+    }
+
+    collide(piece = this.currentPiece) {
+        const { shape, pos } = piece;
+        for (let y = 0; y &lt; shape.length; y++) {
+            for (let x = 0; x &lt; shape[y].length; x++) {
+                if (
+                    shape[y][x] &amp;&amp;
+                    (this.board[y + pos.y] &amp;&amp; this.board[y + pos.y][x + pos.x]) !== 0
+                ) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    merge() {
+        const { shape, pos, id } = this.currentPiece;
+        shape.forEach((row, y) =&gt; {
+            row.forEach((value, x) =&gt; {
+                if (value) {
+                    this.board[y + pos.y][x + pos.x] = id;
+                }
+            });
+        });
+        this.clearLines();
+    }
+
+    clearLines() {
+        outer: for (let y = ROWS - 1; y &gt;= 0; y--) {
+            for (let x = 0; x &lt; COLS; x++) {
+                if (this.board[y][x] === 0) {
+                    continue outer;
+                }
+            }
+
+            const row = this.board.splice(y, 1)[0].fill(0);
+            this.board.unshift(row);
+            y++;
+        }
+    }
+
+    rotate() {
+        const shape = this.currentPiece.shape;
+        this.currentPiece.shape = shape[0].map((_, index) =&gt; shape.map(row =&gt; row[index])).reverse();
+        if (this.collide()) {
+            this.currentPiece.shape = shape;
+        }
+    }
+
+    move(dir) {
+        this.currentPiece.pos.x += dir;
+        if (this.collide()) {
+            this.currentPiece.pos.x -= dir;
+        }
+    }
+
+    drop() {
+        this.currentPiece.pos.y++;
+        if (this.collide()) {
+            this.currentPiece.pos.y--;
+            this.merge();
+            this.currentPiece = this.nextPiece;
+            this.nextPiece = this.newPiece(this.currentPiece.id);
+            this.canHold = true; // 新方块生成后可以存储
+            if (this.collide()) {
+                this.gameOver = true;
+            }
+        }
+        this.dropCounter = 0;
+    }
+
+    hardDrop() {
+        while (!this.collide()) {
+            this.currentPiece.pos.y++;
+        }
+        this.currentPiece.pos.y--;
+        this.merge();
+        this.currentPiece = this.nextPiece;
+        this.nextPiece = this.newPiece(this.currentPiece.id);
+        this.canHold = true; // 新方块生成后可以存储
+        if (this.collide()) {
+            this.gameOver = true;
+        }
+        this.update();
+    }
+
+    holdPiece() {
+        if (!this.canHold) return;
+        if (this.heldPiece) {
+            const temp = this.currentPiece;
+            this.currentPiece = this.heldPiece;
+            this.heldPiece = temp;
+            this.currentPiece.pos = { x: Math.floor(COLS / 2) - Math.floor(this.currentPiece.shape[0].length / 2), y: 0 };
+        } else {
+            this.heldPiece = this.currentPiece;
+            this.currentPiece = this.nextPiece;
+            this.nextPiece = this.newPiece(this.currentPiece.id);
+        }
+        this.canHold = false; // 存储方块后本轮不能再存储
+        this.draw();
+    }
+
+    update(time = 0) {
+        const deltaTime = time - this.lastTime;
+        this.lastTime = time;
+        this.dropCounter += deltaTime;
+        if (this.dropCounter &gt; this.dropInterval) {
+            this.drop();
+        }
+        this.draw();
+        if (!this.gameOver) {
+            requestAnimationFrame(this.update.bind(this));
+        } else {
+            alert('Game Over');
+        }
+    }
+
+    reset() {
+        this.initGame();
+        this.update();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () =&gt; {
+    const tetris = new Tetris();
+    document.addEventListener('keydown', event =&gt; {
+        if (event.key === 'ArrowLeft') {
+            tetris.move(-1);
+            tetris.moveLeftTimeout = setTimeout(() =&gt; {
+                tetris.moveLeftInterval = setInterval(() =&gt; tetris.move(-1), CONTINUOUS_MOVE_INTERVAL);
+            }, INITIAL_MOVE_DELAY);
+        } else if (event.key === 'ArrowRight') {
+            tetris.move(1);
+            tetris.moveRightTimeout = setTimeout(() =&gt; {
+                tetris.moveRightInterval = setInterval(() =&gt; tetris.move(1), CONTINUOUS_MOVE_INTERVAL);
+            }, INITIAL_MOVE_DELAY);
+        } else if (event.key === 'ArrowDown') {
+            tetris.drop();
+        } else if (event.key === 'ArrowUp') {
+            tetris.rotate();
+        } else if (event.key === ' ') {
+            tetris.hardDrop();
+        } else if (event.key.toLowerCase() === 'r') {
+            tetris.reset();
+        } else if (event.key.toLowerCase() === 'shift') {
+            tetris.holdPiece();
+        }
+    });
+
+    document.addEventListener('keyup', event =&gt; {
+        if (event.key === 'ArrowLeft') {
+            clearTimeout(tetris.moveLeftTimeout);
+            clearInterval(tetris.moveLeftInterval);
+            tetris.moveLeftTimeout = null;
+            tetris.moveLeftInterval = null;
+        } else if (event.key === 'ArrowRight') {
+            clearTimeout(tetris.moveRightTimeout);
+            clearInterval(tetris.moveRightInterval);
+            tetris.moveRightTimeout = null;
+            tetris.moveRightInterval = null;
+        }
+    });
+});
+</pre>
+<p></p><br />期末專案 << <a href='期末專案.html'>Previous</a> <a href='CSS代碼.html'>Next</a> >> CSS代碼</div>
 
     <!-- footer -->
       <div class="container">
