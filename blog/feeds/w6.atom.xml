@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統 - w6</title><link href="./" rel="alternate"></link><link href="./feeds/w6.atom.xml" rel="self"></link><id>./</id><updated>2024-06-14T00:38:00+08:00</updated><entry><title>2024 w6 課程</title><link href="./2024-w6-blog-course.html" rel="alternate"></link><published>2024-06-14T00:38:00+08:00</published><updated>2024-06-13T16:47:32+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-06-14:./2024-w6-blog-course.html</id><summary type="html">&lt;p&gt;第六週課程, 如何透過與 ChatGPT 的對話, 了解有關 git 在不同專業領域的應用方法.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;第六週課程, 如何透過與 ChatGPT 的對話, 了解有關 git 在不同專業領域的應用方法.&lt;/p&gt;
+
+
+&lt;h1&gt;git的使用、發展歷史、如何解決問題?&lt;/h1&gt;
+&lt;p&gt;將下面題目解答並放入自己的網站上,&lt;a href="https://41223136.github.io/wcm2024/content/w6.html"&gt;第六週連結&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1.根據您的專業, 就 git 的使用, 從與 ChatGPT 的對話, 將內容整理到個人的第六網誌, 其中包含: git 的發展歷史, 創作人的相關履歷, 以及一般相同專業人士如何利用  git 解決內容管理問題?&lt;/p&gt;
+&lt;p&gt;2.假如要在 Windows 實際 demo git client 與 git server, 該如何進行? 請將相關操作流程整理至個人第六週網誌中.&lt;/p&gt;</content><category term="w6"></category><category term="w6上課內容"></category></entry></feed>
