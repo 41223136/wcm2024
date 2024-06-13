@@ -770,7 +770,16 @@ for (p in friends) {
 <p>Q:CSS是什麼?</p>
 <p>A:是一個階層式樣式表(英語：<span lang="en">Cascading Style Sheets)，是一種用來為結構化文件添加樣式的電腦語言。</span></p>
 <p><span lang="en">CSS可以靜態地修飾網頁，能夠對網頁中的元素位置的排版進行像素級精確控制，支援幾乎所有的字型字號樣式，擁有對網頁對象和模型樣式編輯的能力。但CSS不能單獨使用，必須與html一起協同工作，CSS可以用於設定頁面布局、設定頁面元素樣式、設定適用於所有網頁的全域樣式。</span></p>
-<p><span lang="en">資料尚未完全...</span></p><h1>了解AI產業的發展過程</h1>
+<p><span lang="en">CSS不能單獨使用，必須與html或XML一起協同工作，CSS是輔助他們，讓網頁變得更多樣化，例如字型顏色、背景應該是怎樣的、如何排列、邊界等等都自須在html檔案內列出，有時重複列出。CSS可以幫作者將這些資訊中的大部分個隔離出來，簡化html檔案，比如html中的H2標誌這個為二級標誌，它在級別上比一級H1還要低，比三級標題H3高。這些資訊都是結構上的資訊。</span></p>
+<p>一般來說級別越高的標題其字型也是越大的，H1字型最大，字型越大它表示的內容就重要，此外一般標題都使用粗字體，突現他們的重要性。</p>
+<p>假如要確定H2標題顏色、字型、大小，要使用html中的font或其他樣式指令。一個標題要用斜體字、紅色的字元、白色的底色的話，就要這樣寫出:</p>
+<pre class="brush:css;auto-links:false;toolbar:false" contenteditable="false">&lt;H2&gt;&lt;font color="red" bgcolor="white"&gt;&lt;i&gt;使用CSS&lt;/i&gt;&lt;/font&gt;&lt;/H2&gt;</pre>
+<p>這些顯示用的指令使得html變得更複雜，要維護也比較難。假如所有的二級標題都要這樣顯示的話，所有二級標題燈要這麼複雜。別人就無法改變這些規定，假如別人喜歡藍色標題的話，它就無法更改標題的顏色。</p>
+<p>使用CSS的話H2指令只規定文章結構，其顯示由樣式表來規定，上面例子可以變成這樣:</p>
+<pre class="brush:css;auto-links:false;toolbar:false" contenteditable="false">&lt;H2&gt;使用CSS&lt;/H2&gt;</pre>
+<p>服從的樣式表可以規定H2指令使用斜體字、紅色背景和白色背景:</p>
+<pre class="brush:css;auto-links:false;toolbar:false" contenteditable="false">H2 { color: red; background: white; font-style: italic; }</pre>
+<p>這樣顯示與內容就分開了，html只表達文章結構，CSS表達所有的顯示。</p><h1>了解AI產業的發展過程</h1>
 <p>為什麼會想了解AI的由來?</p>
 <p>因為看了黃仁勳的主題演講，裡面有提到ChatGPT的發展過程，而記錄下來。</p>
 <p></p>
