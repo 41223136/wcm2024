@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統 - w4</title><link href="./" rel="alternate"></link><link href="./feeds/w4.atom.xml" rel="self"></link><id>./</id><updated>2024-06-13T23:12:00+08:00</updated><entry><title>2024 w4 課程</title><link href="./2024-w4-blog-course.html" rel="alternate"></link><published>2024-06-13T23:12:00+08:00</published><updated>2024-06-13T15:29:58+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-06-13:./2024-w4-blog-course.html</id><summary type="html">&lt;p&gt;wcm2024 第四週上課內容&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;wcm2024 第四週上課內容&lt;/p&gt;
+
+
+&lt;h1&gt;有關建立網站&lt;/h1&gt;
+&lt;p&gt;網際內容管理的網際指的並非網際網路的 Internet, 而是指 Web-based, 也就是針對網頁瀏覽器檢視的內容加以管理&lt;/p&gt;
+&lt;p&gt;希望所管理的網站內容, 從無到有的過程留下改版歷程, 因此使用分散式版次管理系統進行網頁的配置, 也就是利用 Github 所提供的 Pages 功能來建立網頁&lt;/p&gt;
+&lt;h1&gt;Replit靜態網站檢視&lt;/h1&gt;
+&lt;p&gt;下載 main2.txt 與 static.txt, (老師的網誌裡面有txt碼)其中包含 main2.py 與 static.py, 只要在 Shell 執行 python3 main2.py 就可以執行倉儲內的靜態網站檢視. 另一方面, 若要取消先前執行 python3 main2.py, 只需要在 Shell 頁面按下 ctrl + c, c 代表 cancle 也就是取消. 然後若要執行動態網站，可以在 Shell 執行 python3 main.py 或者使用 Replit 的 Run 按鍵&lt;/p&gt;
+&lt;h1&gt;LaTeX&lt;/h1&gt;
+&lt;p&gt;建立各組期中與期末報告&lt;/p&gt;</content><category term="w4"></category><category term="w4上課內容"></category></entry></feed>

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統 - w3</title><link href="./" rel="alternate"></link><link href="./feeds/w3.atom.xml" rel="self"></link><id>./</id><updated>2024-06-13T00:12:00+08:00</updated><entry><title>2024 w3 課程</title><link href="./2024-w3-blog-course.html" rel="alternate"></link><published>2024-06-13T00:12:00+08:00</published><updated>2024-06-12T16:12:27+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-06-13:./2024-w3-blog-course.html</id><summary type="html">&lt;p&gt;wcm2024 第三週上課內容&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統 - w3</title><link href="./" rel="alternate"></link><link href="./feeds/w3.atom.xml" rel="self"></link><id>./</id><updated>2024-06-13T13:43:51+08:00</updated><entry><title>2024 w3 課程</title><link href="./2024-w3-blog-course.html" rel="alternate"></link><published>2024-06-13T00:12:00+08:00</published><updated>2024-06-13T13:43:51+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-06-13:./2024-w3-blog-course.html</id><summary type="html">&lt;p&gt;wcm2024 第三週上課內容&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;wcm2024 第三週上課內容&lt;/p&gt;
 
 
+&lt;h1&gt;介紹Git的指令&lt;/h1&gt;
+&lt;p&gt;可以至&lt;a href="https://41223136.github.io/wcm2024/content/git%20order.html"&gt;Git的指令&lt;/a&gt;了解指令的用法,並查看自己需要什麼&lt;/p&gt;
+&lt;h1&gt;利用Gitpod和localhost維護倉儲&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://www.gitpod.io/"&gt;Gitpod&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;利用 Github Classroom 分組&lt;/h1&gt;
 &lt;p&gt;取得 mdewcm2024 帳號下的 1a-ag1 倉儲, 所有第一組的組員均對此分組倉儲有管理權, 可以使用登入 Github 的帳號權限進行改版
 由於在 Replit 免費帳號下, 僅能與登入 Github 的帳號進行授權, 且在 Replit 導入的倉儲, 任何人都能夠取得倉儲下 .git 的所有資料, 因此無法利用組員的 Github 帳號 token 取得管理授權, 而必須動態在 /home/runner/.ssh 下建立 id_rsa 與 config 連線設定, 各組組員才能利用 Replit 管理分組網站內容&lt;/p&gt;
