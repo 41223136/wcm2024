@@ -1,9 +1,9 @@
 ---
-Title: 期中課程整理
+Title: wcm2024 期中課程整理
 Date: 2024-06-14 11:50
-Category: 期中課程整理
-Tags: 期中課程整理
-Slug: 2024-midterm-blog-course
+Category: wcm2024 期中課程整理
+Tags: wcm2024 期中課程整理
+Slug: 2024-w8-blog-course
 Author: kmol
 ---
 
