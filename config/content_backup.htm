@@ -758,7 +758,21 @@ document.addEventListener('DOMContentLoaded', () =&gt; {
     gap: 1px;
 }
 </pre>
-<p></p><h2>python代碼</h2><h1>基礎語法介紹</h1>
+<p></p><h2>python代碼</h2>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from flask import Flask, render_template
+from flask_socketio import SocketIO
+
+app = Flask(__name__)
+socketio = SocketIO(app)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    socketio.run(app, host='10.10.81.160', port=5000, debug=True)
+</pre>
+<p></p><h1>基礎語法介紹</h1>
 <p>介紹JavaScript和css的基本語法內容</p>
 <h2>了解基本 html 語法</h2>
 <p>1.學習html的基本架構</p>
