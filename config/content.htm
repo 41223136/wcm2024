@@ -215,7 +215,8 @@
 <p>Python 程式系統?</p>
 <p>網頁上的 IDE?</p>
 <p>AI 工具?</p>
-<p>實作練習問題?</p><h2>網頁式內容管理</h2>
+<p>實作練習問題?</p>
+<h2>網頁式內容管理</h2>
 <p>Q1:如何建立 Github 上的網站?Q2:如何管理內容?Q3: 如何建立章節式網站?Q4:能放入甚麼多媒體內容?Q5:靜態圖文?Q6:動態圖文?Q7:線上遊戲?Q8:3D 零組件展示?Q9:如何建立網頁系統中的網誌?Q10:如何建立網頁系統中的簡報?</p>
 <p>A1:<span> GitHub 上建立網站可以使用 GitHub Pages ，先創立一個儲存庫，名稱為username.github.io，在存儲庫中創建一個名為「index.html」的 HTML 文件，用於構建你的網站主頁。將網站的代碼添加到 index.html 文件中，然後把它推到 GitHub 存儲庫。</span></p>
 <p><span>A2: GitHub 上管理網站內容通常使用版本控制工具 Git。可以在本地創建一個 Git 存儲庫，將網站代碼下載到本地，然後在本地修改和更新網站內容。完成修改後，使用 Git 將更改推送到 GitHub 存儲庫。另外，可以使用分支（Branches）來開發新功能或進行實驗，然後將分支合併（Merge）到主分支（通常是 master 或 main）中。</span></p>
@@ -718,7 +719,8 @@ document.addEventListener('DOMContentLoaded', () =&gt; {
     });
 });
 </pre>
-<p></p><h2>CSS代碼</h2>
+<p></p>
+<h2>CSS代碼</h2>
 <pre class="brush:css;auto-links:false;toolbar:false" contenteditable="false">body {
     display: flex;
     justify-content: center;
@@ -762,7 +764,8 @@ document.addEventListener('DOMContentLoaded', () =&gt; {
     gap: 1px;
 }
 </pre>
-<p></p><h2>python代碼</h2>
+<p></p>
+<h2>python代碼</h2>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from flask import Flask, render_template
 from flask_socketio import SocketIO
 
@@ -776,7 +779,8 @@ def index():
 if __name__ == '__main__':
     socketio.run(app, host='10.10.81.160', port=5000, debug=True)
 </pre>
-<p></p><h1>基礎語法介紹</h1>
+<p></p>
+<h1>基礎語法介紹</h1>
 <p>介紹JavaScript和css的基本語法內容</p>
 <h2>了解基本 html 語法</h2>
 <p>1.學習html的基本架構</p>
@@ -1179,8 +1183,108 @@ for (p in friends) {
 <p></p>
 <p>現在許多產業都需要AI的幫助，例如:醫療健康、金融、、交通和物流、製造業、教育、娛樂等等。</p>
 <p>如果想要繼續鑽研AI方面就要比任何人還要厲害，在社會上有一席之地，別人不會的，我會了，就可以在市場生存下去。<span style="background-color: #ffff00;">最重要的是創新</span>。</p>
+<!-- <script src="./../cmsimde/static/jquery.js"></script> -->
 <p></p>
-<p></p><h1>Replit</h1>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<p>
+<script src="/get_page/cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+<script src="/get_page/cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+<script src="/get_page/1a%E6%AF%8F%E5%80%8B%E4%BA%BA%E7%9A%84%E5%80%89%E5%84%B2/tipuesearch_content.js"></script>
+<script src="/get_page/cmsimde/static/tipuesearch/tipuesearch.js"></script>
+</p>
+<!-- for Wink3 客製化關閉 --><!--
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
+<p>
+<script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        
+</script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shCore.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushBash.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushDiff.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushJScript.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushJava.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushPython.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushSql.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushHaxe.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushXml.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushPhp.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushPowerShell.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushLua.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushMojo.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushCpp.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushCss.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushCSharp.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushDart.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushRust.js" type="text/javascript"></script>
+<script type="text/javascript">
+SyntaxHighl
+</script>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+--><!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<div class="container"><nav><!-- for footer --></nav></div>
+<!-- for site wrap --><!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+<p>
+<script src="/get_page/cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/jquery-ui.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/popper.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/bootstrap.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/aos.js"></script>
+</p>
+<!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+<p>
+<script src="/get_page/cmsimde/static/chimper/js/main.js"></script>
+</p>
+<!-- 啟用 LaTeX equations 編輯 -->
+<p></p>
+<!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+<h1>Replit</h1>
 <p><a href="https://replit.com">https://replit.com</a></p>
 <p>利用 init_replit 指令安裝所需 Python 模組<br/><br/>chmod u+x init_replit<br/><br/>./init_replit</p>
 <p dir="auto">On Replit:</p>
